@@ -1,38 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
+/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/15 10:39:16 by kgezgin           #+#    #+#             */
-/*   Updated: 2023/12/16 11:19:14 by kgezgin          ###   ########.fr       */
+/*   Created: 2023/12/16 11:11:52 by kgezgin           #+#    #+#             */
+/*   Updated: 2023/12/16 11:19:21 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRESIDENTIALPARDONFORM
-# define PRESIDENTIALPARDONFORM
+#ifndef SHRUBBERYCREATIONFORM_HPP
+# define SHRUBBERYCREATIONFORM_HPP
 
 # include "AForm.hpp"
 
-class PresidentialPardonForm : public AForm
+class ShrubberyCreationForm : public AForm
 {
 	public:
 		// exceptions
-		class PresidentialPardonFormGradeTooHighException : public std::exception
+		class ShrubberyCreationFormGradeTooHighException : public std::exception
 		{
 			public:
 			virtual const char *what() const throw()
 			{
-				return ("PresidentialPardonForm grade is too High");
+				return ("ShrubberyCreationForm grade is too High");
 			}
 		};
-		class PresidentialPardonFormGradeTooLowException : public std::exception
+		class ShrubberyCreationFormGradeTooLowException : public std::exception
 		{
 			public:
 			virtual const char *what() const throw()
 			{
-				return ("PresidentialPardonForm grade is too Low");
+				return ("ShrubberyCreationForm grade is too Low");
 			}
 		};
 		class NotSignedException : public std::exception
@@ -40,16 +40,16 @@ class PresidentialPardonForm : public AForm
 			public:
 			virtual const char *what() const throw()
 			{
-				return ("PresidentialPardonForm is not Signed");
+				return ("ShrubberyCreationForm is not Signed");
 			}
 		};
 
 		// member functions
-		PresidentialPardonForm();
-		PresidentialPardonForm(const std::string &target);
-		PresidentialPardonForm(const PresidentialPardonForm &src);
-		PresidentialPardonForm &operator=(const PresidentialPardonForm &src);
-		~PresidentialPardonForm();
+		ShrubberyCreationForm();
+		ShrubberyCreationForm(const std::string &target);
+		ShrubberyCreationForm(const ShrubberyCreationForm &src);
+		ShrubberyCreationForm &operator=(const ShrubberyCreationForm &src);
+		~ShrubberyCreationForm();
 		std::string getTarget()const ;
 		virtual void execute(Bureaucrat const &executor) const;
 

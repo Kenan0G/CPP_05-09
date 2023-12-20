@@ -6,13 +6,13 @@
 #    By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/12 09:41:23 by kgezgin           #+#    #+#              #
-#    Updated: 2023/12/16 11:39:27 by kgezgin          ###   ########.fr        #
+#    Updated: 2023/12/16 13:02:58 by kgezgin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 OBJS_DIR = objs
 
-SRCS = main.cpp Bureaucrat.cpp AForm.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp\
+SRCS = main.cpp Bureaucrat.cpp AForm.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp Intern.cpp\
 
 OBJS = $(addprefix $(OBJS_DIR)/, $(SRCS:.cpp=.o))
 
