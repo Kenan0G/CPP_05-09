@@ -6,7 +6,7 @@
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 10:39:16 by kgezgin           #+#    #+#             */
-/*   Updated: 2023/12/16 11:19:14 by kgezgin          ###   ########.fr       */
+/*   Updated: 2023/12/26 10:43:10 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,6 @@ class PresidentialPardonForm : public AForm
 		};
 
 		// member functions
-		PresidentialPardonForm();
 		PresidentialPardonForm(const std::string &target);
 		PresidentialPardonForm(const PresidentialPardonForm &src);
 		PresidentialPardonForm &operator=(const PresidentialPardonForm &src);

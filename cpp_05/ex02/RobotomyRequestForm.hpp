@@ -6,7 +6,7 @@
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 11:11:58 by kgezgin           #+#    #+#             */
-/*   Updated: 2023/12/16 11:24:36 by kgezgin          ###   ########.fr       */
+/*   Updated: 2023/12/26 10:25:17 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ class RobotomyRequestForm : public AForm
 		};
 
 		// member functions
-		RobotomyRequestForm();
 		RobotomyRequestForm(const std::string &target);
 		RobotomyRequestForm(const RobotomyRequestForm &src);
 		RobotomyRequestForm &operator=(const RobotomyRequestForm &src);

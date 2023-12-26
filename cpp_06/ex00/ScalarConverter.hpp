@@ -6,7 +6,7 @@
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 13:44:59 by kgezgin           #+#    #+#             */
-/*   Updated: 2023/12/20 12:02:05 by kgezgin          ###   ########.fr       */
+/*   Updated: 2023/12/26 17:01:41 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,21 +23,21 @@
 class ScalarConverter
 {
 	public:
-		static bool isChar(const std::string &input);
-		static bool isInt(const std::string &input);
-		static bool isFloat(const std::string &input);
-		static bool isDouble(const std::string &input);
+		ScalarConverter		&operator=(const ScalarConverter &src);
 
-		static void convert(const std::string &input);
-		static void printChar(char c);
-		static void printInt(double n);
-		static void printDouble(double d);
-		static void printFloat(float f);
+		static bool			isChar(const std::string &input);
+		static bool			isInt(const std::string &input);
+		static bool			isFloat(const std::string &input);
+		static bool			isDouble(const std::string &input);
+
+		static void			convert(const std::string &input);
+		static void			printChar(char c);
+		static void			printInt(double n);
+		static void			printDouble(double d);
+		static void			printFloat(float f);
 
 	private:
 		ScalarConverter();
-		ScalarConverter(const ScalarConverter &);
-		ScalarConverter &operator=(const ScalarConverter &src);
+		ScalarConverter(const ScalarConverter &src);
 		std::string		_value;
 };
-

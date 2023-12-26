@@ -6,7 +6,7 @@
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 12:20:32 by kgezgin           #+#    #+#             */
-/*   Updated: 2023/12/16 13:07:15 by kgezgin          ###   ########.fr       */
+/*   Updated: 2023/12/26 10:41:49 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,9 @@ Intern::~Intern()
 
 AForm	*Intern::makeForm(std::string form, std::string target)
 {
-	std::string	form_names[3] = {"PresidentialPardonForm",
+	std::string	form_names[3] = {"ShrubberyCreationForm",
 								"RobotomyRequestForm",
-								"ShrubberyCreationForm"};
+								"PresidentialPardonForm"};
 	AForm *forms[] = {
 		new ShrubberyCreationForm(target),
 		new RobotomyRequestForm(target),

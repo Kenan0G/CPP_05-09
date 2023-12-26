@@ -6,18 +6,14 @@
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 10:39:16 by kgezgin           #+#    #+#             */
-/*   Updated: 2023/12/16 12:15:34 by kgezgin          ###   ########.fr       */
+/*   Updated: 2023/12/26 10:43:32 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PresidentialPardonForm.hpp"
 
-PresidentialPardonForm::PresidentialPardonForm() : AForm("PresidentialPardonForm", 25, 5),
-													_target("default")
-{
-}
 PresidentialPardonForm::PresidentialPardonForm(const std::string &target) :
-											AForm("PresidentialPardonForm creation", 25, 5),
+											AForm("PresidentialPardonForm", 25, 5),
 											_target(target)
 {
 }

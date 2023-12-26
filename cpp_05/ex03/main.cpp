@@ -6,7 +6,7 @@
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 14:57:20 by kgezgin           #+#    #+#             */
-/*   Updated: 2023/12/16 13:06:03 by kgezgin          ###   ########.fr       */
+/*   Updated: 2023/12/26 10:40:31 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,30 +23,26 @@ int main()
 		Bureaucrat Boss("Boss", 1);
 		// Bureaucrat Recruit("Recruit", 150);
 		Intern someRandomIntern;
-		AForm *rrf;
+		AForm *form;
 
-		rrf = someRandomIntern.makeForm("ShrubberyCreationForm", "Bender");
+		form = someRandomIntern.makeForm("ShrubberyCreationForm", "Bender");
 
-		if (rrf != NULL)
+		if (form != NULL)
 		{
-			Boss.signForm(*rrf);
-			delete rrf;
+			Boss.signForm(*form);
+			delete form;
 		}
 		else
-		{
 			std::cout << "Cannot sign a NULL form." << std::endl;
-		}
 		
-		rrf = someRandomIntern.makeForm("Test", "Bender");
-		if (rrf != NULL)
+		form = someRandomIntern.makeForm("Test", "Bender");
+		if (form != NULL)
 		{
-			Boss.signForm(*rrf);
-			delete rrf;
+			Boss.signForm(*form);
+			delete form;
 		}
 		else
-		{
 			std::cout << "Cannot sign a NULL form." << std::endl;
-		}
 	}
 	catch (std::exception &e)
 	{

@@ -6,7 +6,7 @@
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 11:11:52 by kgezgin           #+#    #+#             */
-/*   Updated: 2023/12/16 11:19:21 by kgezgin          ###   ########.fr       */
+/*   Updated: 2023/12/26 10:43:02 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,6 @@ class ShrubberyCreationForm : public AForm
 		};
 
 		// member functions
-		ShrubberyCreationForm();
 		ShrubberyCreationForm(const std::string &target);
 		ShrubberyCreationForm(const ShrubberyCreationForm &src);
 		ShrubberyCreationForm &operator=(const ShrubberyCreationForm &src);

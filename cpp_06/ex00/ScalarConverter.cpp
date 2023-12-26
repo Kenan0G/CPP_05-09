@@ -6,7 +6,7 @@
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 13:45:13 by kgezgin           #+#    #+#             */
-/*   Updated: 2023/12/20 12:14:08 by kgezgin          ###   ########.fr       */
+/*   Updated: 2023/12/26 17:09:35 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,9 +76,11 @@ void ScalarConverter::printChar(char c)
 		std::cout << "char: '" << c << "'" << std::endl;
 	else
 		std::cout << "char: Non displayable" << std::endl;
+	if (c >= '0' && c <= '9')
+		c -= 48;
 	std::cout << "int: " << static_cast<int>(c) << std::endl;
-	std::cout << "float: " << static_cast<float>(c) << std::endl; // demander a jazil pk on rajoute pas le .0f ici et dans le double
-	std::cout << "double: " << static_cast<double>(c) << std::endl;
+	std::cout << "float: " << static_cast<float>(c) << ".0f" << std::endl;
+	std::cout << "double: " << static_cast<double>(c) << ".0" << std::endl;
 }
 
 void ScalarConverter::printInt(double n)

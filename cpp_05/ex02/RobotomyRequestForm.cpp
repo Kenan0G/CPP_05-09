@@ -6,18 +6,14 @@
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 11:12:00 by kgezgin           #+#    #+#             */
-/*   Updated: 2023/12/16 15:36:27 by kgezgin          ###   ########.fr       */
+/*   Updated: 2023/12/26 10:43:29 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "RobotomyRequestForm.hpp"
 
-RobotomyRequestForm::RobotomyRequestForm() : AForm("RobotomyRequestForm", 72, 45),
-													_target("default")
-{
-}
 RobotomyRequestForm::RobotomyRequestForm(const std::string &target) :
-											AForm("RobotomyRequestForm creation", 72, 45),
+											AForm("RobotomyRequestForm", 72, 45),
 											_target(target)
 {
 }
@@ -55,11 +51,7 @@ void	RobotomyRequestForm::execute(Bureaucrat const &executor) const
 	std::cout << "Bzzz... Making drilling noises..." << std::endl;
 	int randomValue = rand();
 	if (randomValue <= RAND_MAX / 2)
-	{
 		std::cout << getTarget() << " has been robotomized successfully!" << std::endl;
-	}
 	else
-	{
 		std::cout << "Robotomy of " << getTarget() << " failed." << std::endl;
-	}
 }

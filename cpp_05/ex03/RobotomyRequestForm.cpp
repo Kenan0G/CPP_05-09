@@ -6,18 +6,14 @@
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 11:12:00 by kgezgin           #+#    #+#             */
-/*   Updated: 2023/12/16 12:10:56 by kgezgin          ###   ########.fr       */
+/*   Updated: 2023/12/26 10:42:54 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "RobotomyRequestForm.hpp"
 
-RobotomyRequestForm::RobotomyRequestForm() : AForm("RobotomyRequestForm", 72, 45),
-													_target("default")
-{
-}
 RobotomyRequestForm::RobotomyRequestForm(const std::string &target) :
-											AForm("RobotomyRequestForm creation", 72, 45),
+											AForm("RobotomyRequestForm", 72, 45),
 											_target(target)
 {
 }

@@ -6,7 +6,7 @@
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/20 15:03:23 by kgezgin           #+#    #+#             */
-/*   Updated: 2023/12/20 15:43:52 by kgezgin          ###   ########.fr       */
+/*   Updated: 2023/12/26 16:36:45 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,3 +61,4 @@ void	identify(Base &p)
 	catch (const std::exception &e) {}
 }
 
+// dynamic_cast ne fonctionne que pour les hiérarchies de classes polymorphiques, c'est-à-dire celles qui ont au moins une fonction virtuelle.
