@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   BitcoinExchange.hpp                                :+:      :+:    :+:   */
+/*   RPN.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/26 13:23:32 by kgezgin           #+#    #+#             */
-/*   Updated: 2023/12/26 20:10:32 by kgezgin          ###   ########.fr       */
+/*   Created: 2023/12/28 14:40:28 by kgezgin           #+#    #+#             */
+/*   Updated: 2023/12/28 14:41:20 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # pragma once
 
 # include <iostream>
+# include <sstream>
+# include <stack>
 # include <string>
-# include <map>
+# include <cstdlib>
 
-class BitcoinExchange
+class RPN
 {
 	public:
-		BitcoinExchange();
-		BitcoinExchange(const BitcoinExchange &src);
-		~BitcoinExchange();
-		BitcoinExchange						&operator=(const BitcoinExchange &src);
-		void								parsingData();
-		void								parsingInput(std::string filename);
-		int									checkInputLine(std::string line);
-		int									checkDataLine(std::string line);
+		RPN();
+		RPN(RPN const &rhs);
+		~RPN();
 
+		RPN &operator=(RPN const &rhs);
+
+		int evaluateRPN(const std::string& expression);
+	
 	private:
-		std::map<std::string, double>	_map;
 };

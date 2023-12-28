@@ -5,18 +5,18 @@
 #                                                     +:+ +:+         +:+      #
 #    By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/12/26 13:02:10 by kgezgin           #+#    #+#              #
-#    Updated: 2023/12/27 14:09:12 by kgezgin          ###   ########.fr        #
+#    Created: 2023/12/28 12:33:16 by kgezgin           #+#    #+#              #
+#    Updated: 2023/12/28 14:12:55 by kgezgin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 OBJS_DIR = objs
 
-SRCS = main.cpp BitcoinExchange.cpp\
+SRCS = main.cpp \
 
 OBJS = $(addprefix $(OBJS_DIR)/, $(SRCS:.cpp=.o))
 
-NAME = btc
+NAME = RPN
 
 CC = c++
 CFLAGS = -Wall -Werror -Wextra -std=c++98  -g #-fsanitize=address

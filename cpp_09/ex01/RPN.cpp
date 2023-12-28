@@ -1,37 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   BitcoinExchange.cpp                                :+:      :+:    :+:   */
+/*   RPN.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/26 13:23:35 by kgezgin           #+#    #+#             */
-/*   Updated: 2023/12/26 20:16:21 by kgezgin          ###   ########.fr       */
+/*   Created: 2023/12/28 14:40:31 by kgezgin           #+#    #+#             */
+/*   Updated: 2023/12/28 14:42:37 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "BitcoinExchange.hpp"
+# include "RPN.hpp"
 
-BitcoinExchange::BitcoinExchange()
+RPN::RPN() {}
+
+RPN::~RPN() {}
+
+RPN::RPN(RPN const &rhs)
 {
+	*this = rhs;
+	return ;
 }
 
-BitcoinExchange::BitcoinExchange(const BitcoinExchange &src)
+RPN &RPN::operator=(RPN const &rhs)
 {
-	if (this != &src)
-		*this = src;
-}
-
-BitcoinExchange	&BitcoinExchange::operator=(const BitcoinExchange &src)
-{
-	if (this != &src)
-	{
-		this->_map = src._map;
-	}
+	(void)rhs;
 	return (*this);
 }
-
-BitcoinExchange::~BitcoinExchange()
-{
-}
-

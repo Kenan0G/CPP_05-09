@@ -5,43 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/12/26 13:02:10 by kgezgin           #+#    #+#              #
-#    Updated: 2023/12/27 14:09:12 by kgezgin          ###   ########.fr        #
+#    Created: 2023/12/28 15:12:24 by kgezgin           #+#    #+#              #
+#    Updated: 2023/12/28 15:12:25 by kgezgin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-OBJS_DIR = objs
-
-SRCS = main.cpp BitcoinExchange.cpp\
-
-OBJS = $(addprefix $(OBJS_DIR)/, $(SRCS:.cpp=.o))
-
-NAME = btc
-
-CC = c++
-CFLAGS = -Wall -Werror -Wextra -std=c++98  -g #-fsanitize=address
-
-
-all: $(NAME)
-
-$(NAME): $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -MMD -o $(NAME)
-
-$(OBJS_DIR)/%.o : %.cpp | $(OBJS_DIR)
-	$(CC) $(CFLAGS) -o $@ -c $<
-
-$(OBJS_DIR):
-	mkdir -p $@
-
-clean:
-	rm -rf $(OBJS) $(OBJS_DIR) $(DEPS)
-
-fclean: clean
-	rm -rf $(NAME)
-
-re: fclean
-	make all
-
-.PHONY: all clean fclean re
-
--include $(DEPS)

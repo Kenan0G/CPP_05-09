@@ -6,7 +6,7 @@
 /*   By: kgezgin <kgezgin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 14:01:31 by kgezgin           #+#    #+#             */
-/*   Updated: 2023/12/21 14:13:49 by kgezgin          ###   ########.fr       */
+/*   Updated: 2023/12/27 13:42:43 by kgezgin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,9 @@ int	main(void)
 		for (unsigned int i = 0; i < copyArray.size(); ++i)
 			std::cout << copyArray[i] << " ";
 		std::cout << std::endl;
+
+		// cas index pas bon
+		std::cout << copyArray[10] << std::endl;
 	}
 	catch (const std::exception &e)
 	{
